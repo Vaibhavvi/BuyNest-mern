@@ -34,11 +34,13 @@ const ownerSchema = new mongoose.Schema(
     products: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Product",
+        ref: "product",
       },
     ],
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("owner", ownerSchema);
+const Owner = mongoose.model("owner", ownerSchema);
+
+module.exports = Owner;
